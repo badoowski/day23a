@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Level 1</title>
     <style>
-        @media (min-width: 600px) {
+      .containerDiv{
+        display: flex;
+        justify-content: center;
+    }
+    @media (min-width: 300px) {
   .div { grid-template-columns: repeat(7, auto); }
 }
     </style>
@@ -69,12 +73,15 @@
         button.style.backgroundColor = 'green'
         randNumDiv.appendChild(button)
 
+        let containerDiv = document.createElement('div')
+        containerDiv.className = 'containerDiv'
+        body.appendChild(containerDiv)
+
         let div = document.createElement('div')
         div.className = 'div'
         div.style.textAlign = "center"
         div.style.display = 'inline-grid'
-        div.style.marginLeft = '19%'
-        body.appendChild(div)                  
+        containerDiv.appendChild(div)               
 
         for (let i = 0; i < 51; i++) {
             let flag = 0
