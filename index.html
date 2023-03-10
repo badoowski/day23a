@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Level 1</title>
     <style>
-      .containerDiv{
+      .containerDiv {
         display: flex;
         justify-content: center;
     }
-    @media (min-width: 300px) {
-  .div { grid-template-columns: repeat(7, auto); }
-}
+
+    @media (min-width: 481px) {
+        .div {
+            grid-template-columns: repeat(7, auto);
+        }
+    }
+    @media (max-width: 480px) {
+        .div {
+            grid-template-columns: repeat(3, auto);
+        }
+    }
     </style>
 </head>
 <body>
